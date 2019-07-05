@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name='counter' content='This is an application that counts the number of times you have visited the main page.'>
+        <title>Counter</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div class="wrapper">
+            <h1>Counter</h1>
+            <p>{{ counter }} times.</p>
+            <form action='/timestwo'>
+                <input type='submit' value='Add 2!' class='button'>
+            </form>
+            <form action='/destroy_session'>
+                <input type='submit' value='Clear' class='button'>
+            </form>
+        </div>
+    </body>
+</html>
